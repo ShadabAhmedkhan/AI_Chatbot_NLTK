@@ -2,11 +2,11 @@ from fastapi import FastAPI, Depends, HTTPException, status, Request
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi.middleware.cors import CORSMiddleware
 
-from database import get_sql_connection  # the one using pyodbc
+from Backend.database import get_sql_connection  # the one using pyodbc
 
 # from nltk_bot import get_bot_response
 from ml_bot import get_bot_response
-from auth import create_access_token, decode_token
+from Backend.auth import create_access_token, decode_token
 from typing import List
 from pydantic import BaseModel
 

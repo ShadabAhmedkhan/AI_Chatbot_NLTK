@@ -2,11 +2,11 @@ from fastapi import FastAPI, Depends, HTTPException, status, Request
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi.middleware.cors import CORSMiddleware
 
-from Backend.database import get_sql_connection  # the one using pyodbc
+from database import get_sql_connection  # the one using pyodbc
 
 # from nltk_bot import get_bot_response
 from ml_bot import get_bot_response
-from Backend.auth import create_access_token, decode_token
+from auth import create_access_token, decode_token
 from typing import List
 from pydantic import BaseModel
 
@@ -51,6 +51,7 @@ import hashlib
 
 @app.post("/signup")
 def signup(form_data: OAuth2PasswordRequestForm = Depends()):
+    print("Received signup request")
     print(form_data)
     conn = get_sql_connection()
     cursor = conn.cursor()

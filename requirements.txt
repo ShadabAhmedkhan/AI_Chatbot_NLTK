@@ -4,3 +4,5 @@ sqlalchemy
 pyodbc
 python-jose[cryptography]
 passlib[bcrypt]
+transformers
+python-dotenv

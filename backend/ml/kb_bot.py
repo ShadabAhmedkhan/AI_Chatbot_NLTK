@@ -2,7 +2,7 @@ import json
 from difflib import get_close_matches
 
 # Load your knowledge base
-with open("finance_kb.json", "r", encoding="utf-8") as f:
+with open("ml/finance_kb.json", "r", encoding="utf-8") as f:
     knowledge_base = json.load(f)  # this must be a list of dicts
 
 # Ensure data is correct

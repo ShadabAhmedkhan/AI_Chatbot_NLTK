@@ -8,7 +8,7 @@
 #     return response[0]['generated_text']
 
 from transformers import pipeline
-from kb_bot import get_kb_response
+from ml.kb_bot import get_kb_response
 
 chat_pipeline = pipeline("text-generation", model="distilgpt2")
 
